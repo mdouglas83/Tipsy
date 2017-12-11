@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- matt's blah blah blah comment - this is danielle messing up matt's comment! -->
+	<meta charset="UTF-8">
+	<title>Tipsy</title>
+	<!-- JQuery -->
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+	<!-- Popper CDN - required for Bootstrap 4.0 Jumbotron -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<!-- Stylesheets -->
+		<!--Bootstrap CDN-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/style.css">
+		<!-- Slick CDN -->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+	  	<link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
+	  	<link href="https://fonts.googleapis.com/css?family=Lato:700|Lora" rel="stylesheet">
+</head>
+<body>
+	<!-- Start of Jumbotron -->
+	<div class="jumbotron jumbotron-fluid">
+		<div id="modal" class="modal container-fluid">
+  			<div class="modal-inner">
+  			</div>
+		</div>
+
+		<!-- Start of container for the header & sub-header -->
+  		<div class="container">
+    		<h1 class="display-3">TIPSY</h1>
+    		<p class="lead">Your Virtual Bartender</p>
+  		</div><!-- End of container for the header & sub-header -->
+
+  		<!-- Begin Form -->
+  		<form class="ingredients-search">	
+			<!-- Type of Alcohol Selector -->
+			<div class="form-group">
+				<h3>What types of alcohol do you currently have?</h3>
+			</div>
+			<!-- Placeholder for future Alcohol Selector Dropdown -->
+			<div class="form-group">	
+			  <input list="sel-alcohol" id="alcohol">
+			  <datalist id="sel-alcohol"></datalist>
+			  <button type="submit" id="alcoholAdd">Add</button>
+		  	</div>
+	  	</form>
+	  	<form class="ingredients-search">
+			<!-- Type of Mixer Selector -->
+			<div class="form-group">
+				<h3>What types of mixers or other ingredients do you have?</h3>
+			</div>
+			<!-- THIS IS DANIELLE'S TEST COMMENT - FIGURING OUT GIT COORDINATION -->
+			<!-- Placeholder for future Mixer Selector Dropdown -->
+			<div class="form-group">
+			  <input list="sel-mixer" id="mixer">
+			  <datalist id="sel-mixer"></datalist>
+			  <button type="submit" id="mixerAdd">Add</button>
+			</div>
+		</form>
+		<form class="ingredients-search">
+			<div id="submission-details">
+				<!-- DEFAULT: EMPTY => Placeholder for displaying the user's current selection -->
+			</div>
+			<button type="submit" id="submit">Submit</button>
+		</form><!-- End of Form -->
+	
+		<!-- Begin "Your Liquors" Card -->
+		<div class="card" style="width: 20rem;">
+	  		<div class="card-header">
+	    		Your Liqours:
+			</div>
+	  		<ul id="liquors" class="list-group list-group-flush">
+	  		</ul>
+		</div><!-- End "Your Liquors" Card -->
+
+		<!-- Begin "Your Mixers Liquors" Card -->
+		<div class="card" style="width: 20rem;">
+	 		<div class="card-header">
+	   			Your Mixers:
+			</div>
+	 		<ul id="mixers" class="list-group list-group-flush">
+	  		</ul>
+		</div><!-- End "Your Mixers Liquors" Card -->
+		
+	</div><!-- End of Jumbotron -->
+	
+
+	<!-- Display Search Results -->
+	<section id="drink-list" class="no-gutter"></section>
+	
+</body>
+
+<!-- Jquery Library -->
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<!-- Slick Jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- Javascript for querying recipes API -->
+<script src="assets/javascript/lists.js"></script>
+<script src="assets/javascript/recipes.js"></script>
+</html>
